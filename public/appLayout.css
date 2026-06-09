@@ -1,0 +1,33 @@
+.app-layout{
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+}
+
+.app-menu{
+    width: 25%;
+    max-width: 400px;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.app-menu-header{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.app-menu-item {
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.app-menu-item:hover {
+    background-color: #e0e0e0;
+}
+
+.app-page-content{
+    flex: 1;
+}
