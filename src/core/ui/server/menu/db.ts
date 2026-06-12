@@ -28,7 +28,7 @@ export async function seedMenuItems() {
 }
 
 export type MenuItem = {
-    id: string | null
+    id: string
     displayName: string
     description: string
     targetUrl: string | null

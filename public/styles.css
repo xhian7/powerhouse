@@ -1,6 +1,36 @@
+:root {
+  /* Color tokens */
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-surface: #f0f0f0;
+  --color-surface-hover: #e0e0e0;
+  --color-accent: #2563eb;
+  --color-accent-text: #ffffff;
+
+  /* Spacing tokens */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+
+  /* Radius tokens */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
 button {
-  padding: 8;
-  border: none;
-  border-radius: 4px;
-  background-color: none;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-surface-hover);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-surface-hover);
 }

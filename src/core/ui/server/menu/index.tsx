@@ -47,7 +47,7 @@ function SubMenu(props: { menu: MenuItem, collapse?: boolean }) {
             hx-swap="outerHTML">
             <span>{props.menu.displayName}</span>
         </div>
-        <div style={{ paddingLeft: '20px', fontSize: '0.9em' }}>
+        <div className="app-menu-submenu">
             <MenuItems items={props.menu.children || []} />
         </div>
     </div>
@@ -73,8 +73,6 @@ menuApi.get('/menu/:id', async (c) => {
     if (!menu) {
         return c.text('Menu not found', 404)
     }
-
-    console.log('Fetched menu:', menu)
 
     return c.html(renderToString(<Menu menu={menu} />))
 })

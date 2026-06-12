@@ -1,7 +1,14 @@
-import { api } from "#core/api";
-import { homeApi } from "./api";
-export { default as homePage } from './ui/counterDemo/index.html'
-export { default as greetPage } from './ui/greet/index.html'
+import { defineModule } from '#core/module'
+import { homeApi } from './api'
+import counterDemoPage from './ui/counterDemo/index.html'
+import greetPage from './ui/greet/index.html'
 
-// Register the homeApi routes under the main api
-api.route('/home', homeApi)
+export default defineModule({
+    name: 'home',
+    apiBasePath: '/home',
+    api: homeApi,
+    pages: {
+        '/pages/home': counterDemoPage,
+        '/pages/greet': greetPage,
+    },
+})
